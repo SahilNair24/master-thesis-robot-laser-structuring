@@ -1,0 +1,55 @@
+# Research
+- Urdf model and other configs for the ABB IRR6660 robotic arm- https://github.com/ros-industrial/abb/tree/kinetic-devel/abb_irb6600_support
+- Moveit2 binary install is possible in Windows but requires installation of ROS2 on Windows which may be tricky, Ubuntu would be preferred with ROS2 - https://moveit.ai/install-moveit2/binary-windows/
+
+# 3d cad data formats
+- STEP, OBJ, STL, 3DS, IGES, PLY
+- More research needed about them
+
+# CAD aaplication
+- FreeCAD, CadQuery, OpenSCAD
+- CadQuery is preferred, more popular, CadQuery better than OpenSCAD- https://cadquery.readthedocs.io/en/latest/intro.html
+- More research can be done or highlighted to explain the choice of software
+
+# Segmentation tool
+- Python libraries like Pymesh, Trimesh exist
+- Trimesh chosen because has out of the box Windows install, Pymesh has installation instructions only for Linux and MacOS
+
+# CadQuery & cq-editor
+## When installed inside mamba
+- import cadquery gives an error - ImportError: numpy._core.multiarray failed to import OR Modulenotfounderror - nlopt
+- runnning cq-editor in cmd line gives error- ImportError: DLL load failed while importing QtWidgets: The specified module could not be found.
+
+## When installed in system
+- The run.bat doesnt load anything
+
+## When installed using cqgui.yml
+- ImportError: DLL load failed while importing OCP: %1 is not a valid Win32 application.
+
+
+## Errors faced initially during cadquery and cq-editor setup(NOW RESOLVED)
+- created conda env called "cq-dev"
+- installed cadquery with mamba install with mamba install -c conda-forge -c cadquery cadquery=master
+        Traceback (most recent call last):
+        File "<stdin>", line 1, in <module>
+        File "C:\Users\sahil\miniforge3\envs\cq-dev\Lib\site-packages\cadquery\__init__.py", line 10, in <module>
+            from .occ_impl.geom import Plane, BoundBox, Vector, Matrix, Location
+        File "C:\Users\sahil\miniforge3\envs\cq-dev\Lib\site-packages\cadquery\occ_impl\geom.py", line 5, in <module>
+            from OCP.gp import (
+        ImportError: DLL load failed while importing OCP: %1 is not a valid Win32 application.
+- installed cq-editor with mamba install -c cadquery -c conda-forge cq-editor=master
+            The following packages are incompatible
+
+# Moveit2 in WSL
+- WSL 2 does not natively support GUI applications, but you can run RViz, MoveIt Setup Assistant, and other GUI tools by:
+    -Installing an X server on Windows, such as VcXsrv or Xming
+
+## Pyvista
+- conda install -c conda-forge pyvista jupyterlab trame trame-vuetify trame-vtk ipywidgets----very imp 
+- render keeps loading forever with pv.set_jupyter_backend('trame'), also with "client" and "server"
+
+
+##Update for meeting on 25-10
+- Went thru tutorial to understand what else could be used 
+- Tried different functions, found slicing option to slice a face and then find cell centers of that, compute normals and club into areas 
+OR Try to compute normals and club cells into segments depending on the orientation of the normal.
