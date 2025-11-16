@@ -1,0 +1,25 @@
+moveit_setup_assistant_config:
+  urdf:
+    package: abb_irb6660_support
+    relative_path: urdf/irb6660.urdf
+  srdf:
+    relative_path: config/abb_irb6660.srdf
+  package_settings:
+    author_name: Sahil Nair
+    author_email: sahil.nair@ipt.fraunhofer.de
+    generated_timestamp: 1737145850
+  control_xacro:
+    command:
+      - position
+    state:
+      - position
+      - velocity
+  modified_urdf:
+    xacros:
+      - control_xacro
+  control_xacro:
+    command:
+      - position
+    state:
+      - position
+      - velocity

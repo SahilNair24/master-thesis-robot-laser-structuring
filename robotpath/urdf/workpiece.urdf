@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<robot name="workpiece_laser">
+  <!-- Dummy world link -->
+  <link name="world"/>
+  <link name="workpiece">
+    <visual>
+      <geometry>
+        <mesh filename="package://robotpath/meshes/curv_obj_0.5m.stl" scale="0.001 0.001 0.001"/> <!-- mm to m -->
+      </geometry>
+      <material name="grey">
+        <color rgba="0.68 0.85 0.90 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <mesh filename="package://robotpath/meshes/curv_obj_0.5m.stl" scale="0.001 0.001 0.001"/> <!-- mm to m -->
+      </geometry>
+    </collision>
+  </link>
+  <joint name="workpiece_to_world" type="fixed">
+    <parent link="world"/>
+    <child link="workpiece"/>
+    <origin xyz="1.2 0 0.8" rpy="0 0 0"/>
+  </joint>
+</robot>
