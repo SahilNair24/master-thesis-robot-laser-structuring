@@ -3,7 +3,7 @@
 
 ## What is this
 
-This folder contains the scripts for the **Robot Path Planning stage** of the robot-based laser structuring master thesis project.  
+This folder contains the scripts for the **Laser Path Planning stage** of the robot-based laser structuring master thesis project.  
 
 In this stage, a 2D pattern is created on a surface using FreeCAD and a gcode file is generated containing an ordered path that the laser scanner must follow to create the desired laser structuring pattern.
 
@@ -14,11 +14,11 @@ In this stage, a 2D pattern is created on a surface using FreeCAD and a gcode fi
 This folder contains a MoveIt configuration package specifically for the ABB IRB 6660 robot. It includes the robot’s kinematic and semantic descriptions (URDF/SRDF), motion-planning parameters, controller and launch files needed to run MoveIt for planning and executing robot trajectories within your path-planning pipeline using ROS/MoveIt.
 
 
-/abb_irb6660_support
+/abb_irb6660_support\
 Provides the ABB IRB 6660 robot model and support files for ROS/MoveIt motion planning
 
 
-/robotpath
+/robotpath\
 This is the main ROS 2 package that is responsible for robot motion planning using Moveit2.
 The package contains ROS 2 nodes and launch files.
 
