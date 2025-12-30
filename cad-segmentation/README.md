@@ -26,10 +26,10 @@ Both these scripts segment a CAD mesh into clusters using K-Means, computes each
 - This script does cad segmentation but only stores centroids and not their normals into a file. This was the initial script to test segmentation that was later upgraded into the the scripts with angles considered.
 
 4. rapidcode_jointtarget.py
-- This script creates a RAPIDCODE module consisting of **jointtargets** for ABB RobotStudio from the saved segmented data (centroids+normals). It was created to validate the CAD Segmentation phase.
+- This script creates a RAPIDCODE module consisting of **jointtargets** for ABB RobotStudio from the saved segmented data (centroids+normals). 
 
 5. rapidcode_robtarget.py **(recommended)**
-- This script creates a RAPIDCODE module consisting of **robtargets** for ABB RobotStudio from the saved segmented data (centroids+normals). It was created to validate the CAD Segmentation phase.
+- This script creates a RAPIDCODE module consisting of **robtargets** for ABB RobotStudio from the saved segmented data (centroids+normals). 
 
 6. test.py
 - This was created to test loading and slicing of different models in Pyvista.
